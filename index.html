@@ -2,34 +2,30 @@
 <html lang="es">
 
 <head>
-   <base href="/delicias-de-caro/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="CSS/style.css"
+    <link rel="stylesheet" href="./CSS/style.css"/>
     <title>Delicias de Caro</title>
 </head>
 
 <body>
 
     <header>
-
-      <h2>Logo</h2>
-      <h3>Inicio</h3>
  
         <!--Enlace relativo-->
         <nav>
 
             <ul>
               <li>
-                <a href="index.html">Inicio</a>
+                <a href="./index.html" class="activo">Inicio</a>
               </li>
 
               <li>
-                <a href="pantallas/sobrenosotros.html">Sobre Nosotros</a>
+                <a href="./pantallas/sobrenosotros.html">Sobre Nosotros</a>
               </li>
 
               <li>
-                <a href="pantallas/contactos.html">Contactos</a>
+                <a href="./pantallas/contactos.html">Contactos</a>
               </li>
               
             </ul>
@@ -43,21 +39,41 @@
 
       <img src="" alt="" />
 
-      <img src="imagenes/BannerPPAL-Desktop-min.jpg" alt="">
+      <img class="banner" src="./imagenes/BannerPPAL-Desktop-min.jpg" alt="">
 
       <h1>Conoce nuestros productos</h1>
 
-    <ul>
+      <div class="contenedor-producto">
+
+        <ul class="productos-inicio rosa">
+
         <li>Bizcochos</li>
+    </ul>
+
+    <ul class="productos-inicio amarillo">
+  
         <li>Postres para eventos</li>
+    </ul>
+
+    <ul class="productos-inicio rosa">
+      
         <li>Cursos personalizados</li>
+      
+    </ul>
+
+    <ul class="productos-inicio amarillo">
+    
         <li>Globos</li>
     </ul>
+
+      </div>
+
+
 
     </main>
 
     <footer>
-       <p> todos los derechos son reservados </p>
+       <p class="derecho-autor"> todos los derechos son reservados </p>
     </footer>
 
 </body>

@@ -2,40 +2,84 @@
 <html lang="es">
 
 <head>
-    <base href="/delicias-de-caro/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicias de Caro</title>
+    <link rel="stylesheet" href="./../CSS/style.css" />
 </head>
 
 <body>
 
-    <h1>Logo</h1>
-    <h1>Sobre Nosotros</h1>
+    <header>
 
-    <!--Enlace relativo-->
-    <a href="index.html">Inicio</a>
-    <a href="pantallas/sobrenosotros.html">Sobre Nosotros</a>
-    <a href="pantallas/contactos.html">Contactos</a>
+        <nav>
+            <!--Enlace relativo-->
 
-    <img src="imagenes/10_productos_pasteleria.jpeg" alt="">
+            <ul>
+                <li>
+                    <a href="./../index.html">Inicio</a>
+                </li>
 
-    <ul>
-        <li>Misión</li>
-        <div>Endulzar los momentos más especiales de nuestros clientes creando repostería artesanal de alta calidad,
-            combinando sabores únicos con una presentación cuidada, y ofreciendo un servicio personalizado que
-            transforma cada pedido en una experiencia inolvidable.</div>
+                <li>
+                    <a href="./sobrenosotros.html" class="activo">Sobre Nosotros</a>
+                </li>
 
-        <li>Visión</li>
-        <div>Ser reconocidos como la repostería de referencia en la región por nuestra creatividad, excelencia en el
-            sabor y compromiso con cada cliente, innovando constantemente sin perder la esencia de lo hecho con amor y
-            dedicación.</div>
+                <li>
+                    <a href="./contactos.html">Contactos</a>
+                </li>
 
-        <li>Valores</li>
-        <div>Calidad artesanal, Pasión por lo que hacemos, Atención al detalle, Innovación, Compromiso con el cliente,
-            Responsabilidad </div>
+            </ul>
 
-    </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <img class="banner" src="./../imagenes/10_productos_pasteleria.jpeg" alt="">
+
+        <div>
+
+        <p class="descripcion-empresa">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+            </p>
+        </div>
+
+        <div class="contenedor-mision-vision-valores">
+
+            <ul class="mision amarillo">
+            <li>Misión</li>
+            <div>Endulzar los momentos más especiales de nuestros clientes creando repostería artesanal de alta calidad,
+                combinando sabores únicos con una presentación cuidada, y ofreciendo un servicio personalizado que
+                transforma cada pedido en una experiencia inolvidable.</div>
+
+        </ul>
+
+        <ul class="vision rosa">
+             <li>Visión</li>
+            <div>Ser reconocidos como la repostería de referencia en la región por nuestra creatividad, excelencia en el
+                sabor y compromiso con cada cliente, innovando constantemente sin perder la esencia de lo hecho con amor
+                y
+                dedicación.</div>
+        </ul>
+
+        <ul class="valores amarillo">
+            <li>Valores</li>
+            <div>Calidad artesanal, Pasión por lo que hacemos, Atención al detalle, Innovación, Compromiso con el
+                cliente,
+                Responsabilidad </div>
+        </ul>
+
+        </div>
+    
+
+    </main>
+
+    <footer>
+       <p class="derecho-autor"> todos los derechos son reservados </p>
+    </footer>
 
 
 </body>
