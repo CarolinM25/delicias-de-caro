@@ -8,18 +8,24 @@ body {
     color: #000000;
     width: 100%;
     overflow-x: hidden;
+    height: 100vh;
+}
+
+main {
+    height: 100vh;
 }
 
 .activo {
     font-weight: bold;
     text-decoration: underline;
 }
+
 .banner {
-  width: 96%;
-  max-height: 600px;
-  object-fit: cover;
-  margin-right: 2%;
-  margin-left: 2%;
+    width: 96%;
+    max-height: 600px;
+    object-fit: cover;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 /* --------- Página de Inicio --------- */
@@ -114,9 +120,7 @@ ul.productos-inicio {
 
 /* --------- Página Sobre Nosotros --------- */
 
-.img {
-
-}
+.img {}
 
 p.descripcion-empresa {
     color: #000000;
@@ -165,9 +169,67 @@ ul.valores {}
 
 }
 
+
+/* --------- Página Contactos --------- */
+
+.contenedores-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.contenedores-info div {
+    text-align: center;
+    display: block;
+}
+
+
+.contenedor-contacto {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+    width: 30%;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 5px 5px 0 #efb3bc;
+
+}
+
+.h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.p {
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.contenedor-redes {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+    width: 30%;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 5px 5px 0 #efb3bc;
+}
+
 p.derecho-autor {
     color: #000000;
-    margin: 30px 0;
     text-align: center;
     background-color: #c2ecfd;
     padding: 10px;
@@ -175,4 +237,12 @@ p.derecho-autor {
     position: relative;
     bottom: 0;
     width: 100%;
+    margin: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
 }
