@@ -1,12 +1,35 @@
-@charset "UTF-8";
 /* --------- Variables --------- */
+$color-bg: #ffffff;
+$color-text: #000000;
+$color-primary: #00a3e0;
+$color-rosa: #efb3bc;
+$color-amarillo: #efe2b3;
+$color-footer-bg: #c2ecfd;
+$shadow-accent: 5px 5px 0 #efb3bc;
+
 /* --------- Mixins reutilizables --------- */
+@mixin flex-center-wrap($justify: center, $align: flex-start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: wrap;
+}
+
+@mixin card-box($w: 330px) {
+  width: $w;
+  display: block;
+  padding: 30px;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: $shadow-accent;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: $color-bg;
+  color: $color-text;
   width: 100%;
   overflow-x: hidden;
   height: 100vh;
@@ -31,7 +54,7 @@ main {
 
 /* --------- Página de Inicio --------- */
 h1 {
-  color: #000000;
+  color: $color-text;
   margin: 10px 0;
   text-align: center;
   margin-top: 50px;
@@ -40,45 +63,46 @@ h1 {
 
 nav {
   /* Primera definición */
-  background-color: #00a3e0;
+  background-color: $color-primary;
   padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  color: #000000;
+
+  ul {
+    list-style: none;
+    margin: 40px;
+    padding: 0;
+    justify-content: center;
+    gap: 50px;
+    background-color: transparent;
+    margin-right: 40px;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        cursor: pointer;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+
+  color: $color-text;
   margin: 20px 0;
   text-align: right;
 }
-nav ul {
-  list-style: none;
-  margin: 40px;
-  padding: 0;
-  justify-content: center;
-  gap: 50px;
-  background-color: transparent;
-  margin-right: 40px;
-}
-nav ul li {
-  display: inline-block;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 25px;
-  cursor: pointer;
-  padding-left: 8px;
-  padding-right: 8px;
-}
 
 ul.productos-inicio {
-  color: #000000;
+  color: $color-text;
   width: 180px;
   height: 160px;
   border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  @include flex-center-wrap(center, flex-start);
   font-weight: bold;
   gap: 20px;
   padding: 20px;
@@ -86,26 +110,25 @@ ul.productos-inicio {
 }
 
 .rosa {
-  background-color: #efb3bc;
+  background-color: $color-rosa;
 }
 
 .amarillo {
-  background-color: #efe2b3;
+  background-color: $color-amarillo;
 }
 
 .contenedor-producto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.contenedor-producto ul {
-  list-style: none;
+  @include flex-center-wrap(center, center);
+
+  ul {
+    list-style: none;
+  }
 }
 
 /* --------- Página Sobre Nosotros --------- */
+
 p.descripcion-empresa {
-  color: #000000;
+  color: $color-text;
   margin: 50px 0;
   margin-left: 90px;
   margin-right: 90px;
@@ -121,10 +144,7 @@ ul.valores {
   border-radius: 20px;
   padding: 10px;
   font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  @include flex-center-wrap(center, flex-start);
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
@@ -132,17 +152,16 @@ ul.valores {
 }
 
 .contenedor-mision-vision-valores {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  @include flex-center-wrap(center, center);
   padding-bottom: 60px;
-}
-.contenedor-mision-vision-valores ul {
-  list-style: none;
+
+  ul {
+    list-style: none;
+  }
 }
 
 /* --------- Página Contactos --------- */
+
 .contenedores-info {
   display: flex;
   flex-direction: row;
@@ -153,18 +172,14 @@ ul.valores {
   margin: 15%;
   gap: 20px;
   padding-bottom: 70px;
-}
-.contenedores-info div {
-  text-align: center;
+
+  div {
+    text-align: center;
+  }
 }
 
 .contenedor-contacto {
-  width: 330px;
-  display: block;
-  padding: 30px;
-  border-radius: 25px;
-  padding: 20px;
-  box-shadow: 5px 5px 0 #efb3bc;
+  @include card-box(330px);
 }
 
 .h2 {
@@ -178,18 +193,13 @@ ul.valores {
 }
 
 .contenedor-redes {
-  width: 330px;
-  display: block;
-  padding: 30px;
-  border-radius: 25px;
-  padding: 20px;
-  box-shadow: 5px 5px 0 #efb3bc;
+  @include card-box(330px);
 }
 
 p.derecho-autor {
-  color: #000000;
+  color: $color-text;
   text-align: center;
-  background-color: #c2ecfd;
+  background-color: $color-footer-bg;
   padding: 10px;
   font-size: 14px;
   position: relative;
@@ -210,22 +220,23 @@ footer {
     flex-direction: column;
   }
 }
+
 @media (max-width: 768px) {
   .contenedor-producto {
     flex-direction: column;
     align-items: center;
   }
 }
+
 @media (max-width: 768px) {
   .contenedor-mision-vision-valores {
     flex-direction: column;
     align-items: center;
   }
+
   ul.mision,
   ul.vision,
   ul.valores {
     width: 300px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
